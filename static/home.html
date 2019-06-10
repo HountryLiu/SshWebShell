@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>基于SSH的WebShell系统 - 图表组合</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <!-- jqgrid-->
+    <link href="css/plugins/jqgrid/ui.jqgrid.css?0820" rel="stylesheet">
+	<!-- Sweet Alert -->
+    <link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css?v=4.1.0" rel="stylesheet">
+
+</head>
+
+<body class="gray-bg">
+	<div class="sk-spinner sk-spinner-wave" style="position:relative;top:40%;z-index:10000;visibility:hidden;">
+        <div class="sk-rect1"></div>
+        <div class="sk-rect2"></div>
+        <div class="sk-rect3"></div>
+        <div class="sk-rect4"></div>
+        <div class="sk-rect5"></div>
+    </div>
+    <div class="wrapper wrapper-content animated fadeInRight">
+		<div class="row">
+			<div class="col-sm-2">
+				<div class="text-center">
+                    <a data-toggle="modal" id="process" class="btn btn-primary" href="home.html#modal-form">进程管理</a>
+                </div>
+            </div>
+		</div><br/>
+		
+        <div class="row">
+  
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>CPU使用率(%)</h5>
+                        <h2 id="cpu_stat">0/100</h2>
+                        <div class="text-center">
+                            <div id="sparkline1"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>内存使用率(M)</h5>
+                        <h2 id="mem_stat">0/0</h2>
+                        <div class="text-center">
+                            <div id="sparkline2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="ibox">
+                    <div class="ibox-content">
+                        <h5>硬盘使用率(G)</h5>
+                        <h2 id="hd_stat">0/0</h2>
+                        <div class="text-center">
+                            <div id="sparkline3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+
+
+
+    </div>
+
+	<div id="modal-form" class="modal fade" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="row">
+			            <div class="col-sm-12">
+			                <div class="ibox ">
+			                    
+			                    <div class="ibox-content">
+			                       			                       	
+			                        <div class="jqGrid_wrapper">
+			                            <table id="table_list_1"></table>
+			                            <div id="pager_list_1"></div>
+			                        </div>
+			     			                        
+			                    </div>
+			                </div>
+			            </div>
+			        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 全局js -->
+    <script src="js/jquery.min.js?v=2.1.4"></script>
+    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+	
+	<!-- jqGrid -->
+    <script src="js/plugins/jqgrid/i18n/grid.locale-cn.js?0820"></script>
+    <script src="js/plugins/jqgrid/jquery.jqGrid.min.js?0820"></script>
+
+	<!-- Sweet alert -->
+    <script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+    <!-- 自定义js -->
+    <script src="js/content.js?v=1.0.0"></script>
+
+    <!-- peity demo data -->
+    <script src="js/demo/peity-demo.js"></script>
+
+	<script src="js/ssh/home.js"></script>
+
+</body>
+
+</html>
